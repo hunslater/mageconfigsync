@@ -1,0 +1,25 @@
+{
+    "output": "mageconfigsync.phar",
+    "chmod": "0755",
+    "main": "bin/mageconfigsync",
+    "directories": ["src/*", "vendor/*"],
+    "files-bin": ["composer.json"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "phpunit",
+                "phpunit-test-case",
+                "process",
+                "service-process",
+                "Tests",
+                "tests",
+                "yaml"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "compactors": [
+    ],
+    "stub": true
+}
